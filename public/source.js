@@ -81,12 +81,13 @@ function endGame(){
   //console.log(typeof temp1);
   const initialScore=parseInt(temp1); //highest score stored in database
  // console.log(initialScore);
+  player.score--;
   if(player.score>initialScore){
-     UpdateScore(player.score);
+     UpdateScore(player.score-1);
   }
   player.speed=5;
   startScreen.classList.remove('hide');
-  startScreen.innerHTML=`Game Over <br> Your Final Score is ${player.score+2} <br> Press here To Restart the Game`;
+  startScreen.innerHTML=`Game Over <br> Your Final Score is ${player.score} <br> Press here To Restart the Game`;
 
 
 }
