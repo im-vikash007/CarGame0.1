@@ -86,7 +86,7 @@ function endGame(){
   }
   player.speed=5;
   startScreen.classList.remove('hide');
-  startScreen.innerHTML=`Game Over <br> Your Final Score is ${player.score+1} <br> Press here To Restart the Game`;
+  startScreen.innerHTML=`Game Over <br> Your Final Score is ${player.score+2} <br> Press here To Restart the Game`;
 
 
 }
