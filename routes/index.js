@@ -2,11 +2,11 @@ const express =require('express');
 const router= express.Router();
 let path = require('path');
 const User= require('../models/User');
-const {ensureAuthenticated}=require('../config/auth');
+const {ensureAuthenticated,ensureAuthenticated1}=require('../config/auth');
 const { runInNewContext } = require('vm');
 
 //Welcome Page
-router.get('/',(req,res)=>{
+router.get('/',ensureAuthenticated1,(req,res)=>{
    res.render('welcome');
  //  console.log('rendering to welcome page')
 });
